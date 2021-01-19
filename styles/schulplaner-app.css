@@ -1,0 +1,94 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* GENERAL STUFF */
+:root {
+  --card: #232323;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+p {
+  padding: 0.5em 0;
+  background-color: transparent;
+}
+
+a {
+  position: relative;
+
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a::after {
+  position: absolute;
+
+  left: 0;
+  width: 0%;
+  top: 1.2em;
+  height: 2px;
+  content: "";
+  background-color: var(--primary);
+
+  transition: all 0.1s ease-in-out;
+}
+
+a:hover::after, a:focus::after {
+  width: 100%;
+
+  transition: all 0.1s ease-in-out;
+}
+
+/* LANDING STUFF */
+.landing {
+  display: flex;
+
+  width: 80vw;
+  height: 90vh;
+  margin: 5vw 10vw;
+}
+
+.title {
+  padding: 1em 0;
+  font-size: 48px;
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 24px; 
+}
+
+.image img {
+  background-color: transparent;
+}
+
+.button-wrapper {
+  display: flex;
+
+  width: 75%;
+  padding-top: 20vh;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button {
+  color: #FFFFFF;
+  font-size: 24px;
+  padding: 20px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid var(--primary);
+}
+
+.button:nth-child(1) {
+  background-color: var(--primary);
+}
+
+/* ABOUT STUFF */
+.about {
+  z-index: 2;
+  height: 100vh;
+  background-color: var(--primary);
+}

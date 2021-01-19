@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+  <title>Japanisch Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="David Penkowoj">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/japanisch/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/japanisch-quiz.css">
+  <script src="scripts/japanisch-quiz.js" defer></script>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="action-settings-overlay">
+    <div class="settings-group">
+      <p class="settings-title">Umfang</p>
+      <p class="settings-text"><span class="possible-questions">0</span> Fragen</p>
+    </div>
+    <div class="settings-group">
+      <p class="settings-title">Abzufragende Lektionen</p>
+      <div class="settings-toggle" data-category="lessons">1</div>
+      <div class="settings-toggle" data-category="lessons">2</div>
+      <div class="settings-toggle" data-category="lessons">3</div>
+      <div class="settings-toggle" data-category="lessons">4</div>
+    </div>
+    <div class="settings-group">
+      <p class="settings-title">Abzufragende Verbformen</p>
+      <!-- Maybe these back to numbers or german -->
+      <div class="settings-toggle" data-category="suffixes">ます</div>
+      <div class="settings-toggle" data-category="suffixes">ません</div>
+      <div class="settings-toggle" data-category="suffixes">でした</div>
+      <div class="settings-toggle" data-category="suffixes">ませんでした</div>
+    </div>
+    <div class="settings-group">
+      <p class="settings-title">Abzufragende Vokabelthemen</p>
+      <div class="settings-toggle" data-category="vocabulary">floskeln</div>
+      <div class="settings-toggle" data-category="vocabulary">schule</div>
+      <div class="settings-toggle" data-category="vocabulary">menschen</div>
+      <div class="settings-toggle" data-category="vocabulary">gebäude</div>
+      <div class="settings-toggle" data-category="vocabulary">unternehmen</div>
+      <div class="settings-toggle" data-category="vocabulary">lebensmittel</div>
+      <div class="settings-toggle" data-category="vocabulary">verkehrsmittel</div>
+      <div class="settings-toggle" data-category="vocabulary">zeiten/zahlen</div>
+      <div class="settings-toggle" data-category="vocabulary">pflanzen</div>
+      <div class="settings-toggle" data-category="vocabulary">adjektive</div>
+      <div class="settings-toggle" data-category="vocabulary">sonstiges</div>
+    </div>
+  </div>
+  <div>
+    <div class="quiz">
+      <div class="verb-wrapper">
+        <div class="action-wrapper">
+          <button class="action-settings-button">
+            <svg class="svg" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M88.5225 59.8474C88.7075 58.4599 88.8 57.0262 88.8 55.4999C88.8 54.0199 88.7075 52.5399 88.4762 51.1524L97.865 43.8449C98.6975 43.1974 98.9288 41.9487 98.42 41.0237L89.54 25.6687C88.985 24.6512 87.8288 24.3274 86.8113 24.6512L75.7575 29.0912C73.445 27.3337 70.9937 25.8537 68.265 24.7437L66.6 12.9962C66.415 11.8862 65.49 11.0999 64.38 11.0999H46.62C45.51 11.0999 44.6312 11.8862 44.4462 12.9962L42.7812 24.7437C40.0525 25.8537 37.555 27.3799 35.2887 29.0912L24.235 24.6512C23.2175 24.2812 22.0612 24.6512 21.5062 25.6687L12.6725 41.0237C12.1175 41.9949 12.3025 43.1974 13.2275 43.8449L22.6162 51.1524C22.385 52.5399 22.2 54.0662 22.2 55.4999C22.2 56.9337 22.2925 58.4599 22.5237 59.8474L13.135 67.1549C12.3025 67.8024 12.0712 69.0512 12.58 69.9762L21.46 85.3312C22.015 86.3487 23.1712 86.6724 24.1887 86.3487L35.2425 81.9087C37.555 83.6662 40.0062 85.1462 42.735 86.2562L44.4 98.0037C44.6312 99.1137 45.51 99.8999 46.62 99.8999H64.38C65.49 99.8999 66.415 99.1137 66.5537 98.0037L68.2187 86.2562C70.9475 85.1462 73.445 83.6662 75.7112 81.9087L86.765 86.3487C87.7825 86.7187 88.9388 86.3487 89.4938 85.3312L98.3738 69.9762C98.9288 68.9587 98.6975 67.8024 97.8187 67.1549L88.5225 59.8474ZM55.5 72.1499C46.3425 72.1499 38.85 64.6574 38.85 55.4999C38.85 46.3424 46.3425 38.8499 55.5 38.8499C64.6575 38.8499 72.15 46.3424 72.15 55.4999C72.15 64.6574 64.6575 72.1499 55.5 72.1499Z" fill="white" />
+            </svg>
+            <svg class="svg invisible" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M84.6374 26.4087C82.8336 24.605 79.9199 24.605 78.1161 26.4087L55.4999 48.9787L32.8836 26.3625C31.0799 24.5587 28.1661 24.5587 26.3624 26.3625C24.5586 28.1662 24.5586 31.08 26.3624 32.8837L48.9786 55.5L26.3624 78.1162C24.5586 79.92 24.5586 82.8337 26.3624 84.6375C28.1661 86.4412 31.0799 86.4412 32.8836 84.6375L55.4999 62.0212L78.1161 84.6375C79.9199 86.4412 82.8336 86.4412 84.6374 84.6375C86.4411 82.8337 86.4411 79.92 84.6374 78.1162L62.0211 55.5L84.6374 32.8837C86.3949 31.1262 86.3949 28.1662 84.6374 26.4087V26.4087Z" fill="white" />
+            </svg>
+          </button>
+          <button class="action-button">Überspringen</button>
+          <button class="help-link" onclick="location.assign('japanisch-hilfe.html')">?</button>
+        </div>
+        <p class="verb">Lädt...</p>
+        <p class="result">Lädt...</p>
+        <div class="progress"></div>
+      </div>
+      <div class="guess-wrapper">
+        <button class="guess-button">Lädt...</button>
+        <button class="guess-button">Lädt...</button>
+        <button class="guess-button">Lädt...</button>
+        <button class="guess-button">Lädt...</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

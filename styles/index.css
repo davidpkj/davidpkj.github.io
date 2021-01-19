@@ -1,0 +1,148 @@
+/* GENERAL STUFF */
+body {
+  display: flex;
+
+  width: 80vw;
+  margin: 5vw 10vw;
+  flex-direction: column;
+}
+
+div {
+  background-color: transparent;
+}
+
+/* TYPOGRAPHY */
+p,
+a {
+  font-size: 18px;
+  color: var(--text);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+p a {
+  position: relative;
+
+  color: var(--primary);
+}
+
+p a::after {
+  position: absolute;
+
+  left: 0;
+  width: 0%;
+  top: 1.2em;
+  height: 2px;
+  content: "";
+  background-color: var(--primary);
+
+  transition: 0.1s ease-in-out;
+}
+
+p a:focus::after, p a:hover::after {
+  width: 100%;
+
+  transition: 0.1s ease-in-out;
+}
+
+h1 {
+  display: block;
+  position: relative;
+
+  padding: 1em 0;
+  font-size: 28px;
+  font-weight: normal;
+  color: var(--primary);
+}
+
+h1::after {
+  position: absolute;
+
+  left: 0;
+  top: 75px;
+  width: 25vw;
+  height: 2px;
+  content: "";
+  background-color: var(--primary);
+}
+
+/* LAYOUT */
+img {
+  display: inline-block;
+
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px var(--shadow);
+}
+
+.about-wrapper {
+  display: flex;
+
+  flex-direction: row;
+  padding: 1em 0 1em 0;
+  justify-content: start;
+}
+
+.about-content {
+  display: flex;
+
+  padding-left: 1em;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.wrapper {
+  padding-top: 1em;
+}
+
+/* CARDS */
+.card-wrapper {
+  width: 100%;
+}
+
+.card {
+  display: block;
+
+  width: 100%;
+  padding: 24px;
+  margin: 24px 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: var(--background);
+  box-shadow: 0 0 10px 10px var(--shadow);
+
+  transition: all 0.1s;
+}
+
+.card:focus,
+.card:hover {
+  outline: none;
+  background-color: var(--highlight);
+  
+  transition: all 0.1s;
+  transform: scale(1.025, 1.025);
+}
+
+.card-title {
+  position: relative;
+
+  font-size: 22px;
+  padding-bottom: 9px;
+
+  transition: all 0.3s;
+}
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 860px) {
+  img {
+    display: none !important;
+  }
+
+  h1::after {
+    display: none !important;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "lessons": {
+    "1": {
+      "floskeln": {
+        "はじめまして": "Begrüßungsformel beim Kennenlernen",
+        "はい、そうです": "Ja, das stimmt",
+        "こんいちは": "Gutgen Tag",
+        "どうぞよろしく": "Begrüßungsformel beim Kennenlernen",
+        "ありがとう": "Danke",
+        "どういたしまして": "Gern geschehen",
+        "じゃあまた": "Also bis dann, Tschüss",
+        "さようなら": "Auf Wiedersehen",
+        "ください": "Bitte",
+        "おはようございます": "guten Morgen",
+        "こんばんは": "guten Abend",
+        "ごめんなさい": "Entschuldigung, es tut mit Leid",
+        "すみません": "Entschuldigung, verzeihen sie",
+        "どうもありがとうごやいます": "vielen Dank",
+        "ちゅうい": "Vorsicht, Achtung"
+      },
+      "schule": {
+        "がっこう": "Schule",
+        "せんせい": "Lehrer/in",
+        "きょうしつ": "Klassenzimmer",
+        "まど": "Fenster",
+        "どあ": "Tür",
+        "つくえ": "Tisch",
+        "いす": "Stuhl",
+        "ほん": "Buch",
+        "きょうかしょ": "Lehrbuch",
+        "のうと": "Schreibheft, Notizbuch",
+        "ふぁいる": "Ordner, Datei (edv)",
+        "ぺん": "Stift",
+        "ぼうるぺん": "Kugelschreiber",
+        "えんぴつ": "Bleistift",
+        "けしごむ": "Radiergummi",
+        "こくばん": "Schreibtafel",
+        "ちょうく": "Kreide",
+        "ぺえじ": "Seite (eines Buches)",
+        "しゅくだい": "Hausaufgabe",
+        "しつすもん": "Frage"
+      },
+      "menschen": {},
+      "gebäude": {
+        "でぱあと": "Kaufhaus",
+        "えき": "Bahnhof"
+      },
+      "unternehmen": {
+        "にもつ": "Gepäck",
+        "かばん": "Tasche",
+        "どいつ": "deutsch, Deutschland",
+        "にほん　/　にっぽん": "Japan"
+      },
+      "lebensmittel": {},
+      "verkehrsmittel": {},
+      "zeiten/zahlen": {},
+      "pflanzen": {
+        "さくら": "Zierkirsche",
+        "はな": "Blume, Blüte",
+        "もも": "Pfirsich"
+      },
+      "adjektive": {},
+      "sonstiges": {
+        "じゃあ": "also (dann), (nun) gut",
+        "みんな": "alle, alles",
+        "もの": "Ding, Sache, Gegenstand",
+        "え": "Bild, Abbildung",
+        "はっきり": "deutlich",
+        "ゆっくり": "in ruhe, langsam",
+        "おおきい": "groß",
+        "もういちど": "nochmal"
+      }
+    },
+    "2": {
+      "floskeln": {},
+      "schule": {
+      "べんきょう": "Lernen, Studium",
+      "せいと": "Schüler"
+      },
+      "menschen": {},
+      "gebäude": {},
+      "unternehmen": {
+        "じゅうどう": "Judo",
+        "さっかあ": "Fußball",
+        "さんぽ": "Spaziergang",
+        "かいもの": "Einkauf, Einkäufe",
+        "てがみ": "Brief",
+        "あめりか": "Amerika",
+        "いぎりす": "England, Großbritannien",
+        "えいご": "Englisch, Englische Sprache",
+        "きっぷ": "Eintrittskarte, Fahrkarte",
+        "はがき": "Postkarte",
+        "きって": "Briefmarke",
+        "めえる": "E-Mail, SMS",
+        "まんが": "Comic, Karikatur",
+        "しんぶん": "Zeitung",
+        "しょうせつ": "Roman, Novelle",
+        "ざっし": "Zeitschrift, Illustrierte",
+        "なまえ": "Name"
+      },
+      "lebensmittel": {
+        "ぱん": "Brot",
+        "ごはん": "gekochter Reis, Mahlzeit",
+        "やさい": "Gemüse",
+        "にく": "Fleisch",
+        "おかし": "Süßigkeiten",
+        "さかな": "Fisch",
+        "さらだ": "Salat",
+        "たまご": "Ei",
+        "くだもの": "Obst",
+        "ぶどう": "Weintraube",
+        "みかん": "Mandarine",
+        "りんご": "Apfel",
+        "すいか": "Wassermelone",
+        "うめ": "Pflaume",
+        "のみもの": "Getränk",
+        "ぎゅうにゅう": "Milch",
+        "じゅうす": "Saft",
+        "こうちゃ": "Schwarzer Tee",
+        "こうひい": "Kaffee",
+        "みず": "Wasser",
+        "たべもの": "Essen, Nahrungsmittel",
+        "じゃがいも": "Kartoffel",
+        "おちゃ": "Tee, Grüner Tee"
+      },
+      "verkehrsmittel": {},
+      "zeiten/zahlen": {
+        "いつ": "wann",
+        "あさ": "Morgen, morgens",
+        "ひる": "Mittag, mittags",
+        "よる": "Abend, abends"
+      },
+      "pflanzen": {},
+      "adjektive": {},
+      "sonstiges": {
+        "なに": "Was",
+        "でも": "Aber",
+        "と": "Und (bei Aufzählungen)",
+        "そして": "Und (zwischen Sätzen)"
+      }
+    },
+    "3": {
+      "floskeln": {
+        "ただいま": "Ich bin wieder da",
+        "おかえりあなさい": "Willkommen zurück",
+        "おやすみなさい": "Gute Nacht"
+      },
+      "schule": {},
+      "menschen": {
+        "かぞく": "Familie",
+        "おかあさん": "Mutter, Mama",
+        "はは": "(meine) Mutter",
+        "どれ": "welche, welches, welcher",
+        "おとうさん": "Vater, Papa",
+        "ちち": "(mein) Vater",
+        "となり": "neben, Nebenseite, Ort nebenan",
+        "おじいさん": "Großvater, Opa",
+        "おばあさん": "Großmutter, Oma",
+        "いぬ": "Hund",
+        "ねこ": "Katze",
+        "おねえさん": "ältere Schwester",
+        "あね": "(meine) ältere Schwester",
+        "おにいさん": "älterer Bruder",
+        "あに": "(mein) älterer Bruder",
+        "いもうとさん": "jüngere Schwester",
+        "いもうと": "(mein) jüngere Schwester",
+        "おとうとさん": "jüngerer Bruder",
+        "おとうと": "(mein) jüngerer Bruder"
+      },
+      "gebäude": {
+        "うち": "Haus, Wohnung"
+      },
+      "unternehmen": {
+        "えいがかん": "Kino",
+        "きっさでん": "Café",
+        "ぎんこう": "Bank",
+        "れすとうらん": "Restaurant"
+      },
+      "lebensmittel": {},
+      "verkehrsmittel": {
+        "あるいて": "zu Fuß",
+        "くるま": "Auto",
+        "ちかてつ": "U-Bahn",
+        "ばす": "Bus",
+        "じてんしゃ": "Fahrrad",
+        "でんしゃ": "Zug, Bahn",
+        "ひこうき": "Flugzeug",
+        "ふね": "Schiff"
+      },
+      "zeiten/zahlen": {
+        "一時^(いちじ)^": "Ein Uhr",
+        "ニ時^(にじ)^": "Zwei Uhr",
+        "三時^(さんじ)^": "Drei Uhr",
+        "四時^(よじ)^": "Vier Uhr",
+        "五時^(ごじ)^": "Fünf Uhr",
+        "六時^(ろくじ)^": "Sechs Uhr",
+        "七時^(しちじ)^": "Sieben Uhr",
+        "八時^(はちじ)^": "Acht Uhr",
+        "九時^(くじ)^": "Neun Uhr",
+        "十時^(じゅうじ)^": "Zehn Uhr",
+        "十一時^(じゅういちじ)^": "Elf Uhr",
+        "十ニ時^(じゅうにじ)^": "Zwölf Uhr",
+        "はん": "halb (bei Uhrzeiten)"
+      },
+      "pflanzen": {},
+      "adjektive": {},
+      "sonstiges": {
+        "あした": "morgen",
+        "きょう": "heute",
+        "だれ": "Wer",
+        "いま": "jetzt",
+        "どこ": "Wo",
+        "きのう": "Gestern",
+        "おととい": "Vorgestern"
+      }
+    },
+    "4": {
+      "floskeln": {
+        "いらっしゃいませ": "Herzlich Willkommen! (zu Kunden)"
+      },
+      "schule": {},
+      "menschen": {
+        "てんいん": "Verkäufer",
+        "男^(おとこ)^": "Mann",
+        "人^(ひと)^": "Mensch, Person",
+        "女^(おんな)^": "Frau",
+        "子^(こ)^": "Kind",
+        "男の子^(おとこのこ)^": "Junge",
+        "女の子^(おのなのこ)^": "Mädchen",
+        "ともだち": "Freund/in"
+      },
+      "gebäude": {
+        "スーパー [sūpā]": "Supermarkt",
+        "コンビニ [konbini]": "24 Stunden Mini-Supermarkt",
+        "はんばいき": "Verkaufsautomat",
+        "みせ": "Geschäft/Filiale",
+        "さかなや": "Fischgeschäft",
+        "にくや": "Metzgerei",
+        "はなや": "Blumengeschäft",
+        "パンや^(ぱんや)^": "Bäckerei",
+        "本や^(ほんや)^": "Buchhandlung",
+        "やおや": "Obst- und Gemüsehändler"
+      },
+      "unternehmen": {
+        "(… は) いくら": "wie teuer (ist …)",
+        "しゅうじ": "Kalligrafie"
+      },
+      "lebensmittel": {
+        "はし": "Essstäbchen"
+      },
+      "verkehrsmittel": {},
+      "zeiten/zahlen": {
+        "千^(せん)^": "tausend",
+        "百^(ひゃく)^": "hundert",
+        "円^(えん)^": "yen",
+        "らいしゅう": "nächste Woche",
+        "せんしゅう": "letzte Woche",
+        "こんしゅう": "diese Woche",
+        "せんげつ": "letzter Monat",
+        "こんげつ": "dieser Monat",
+        "らいげつ": "nächster Monat",
+        "万^(まん)^": "zehntausend"
+      },
+      "pflanzen": {},
+      "adjektive": {
+        "あかい": "rot",
+        "高い^(たかい)^": "teuer, hoch",
+        "安い^(やすい)^": "billig",
+        "くろい": "schwarz",
+        "おもしろい": "interessant, unterhaltsam",
+        "大きい^(おおきい)^": "groß",
+        "小さい^(ちいさい)^": "klein",
+        "あおい": "blau/grün",
+        "しろい": "weiß",
+        "とおい": "weit entfernt",
+        "ちかい": "nah"
+      },
+      "sonstiges": {
+        "おわん": "japanische Lackschale",
+        "あまり…ない": "nicht sehr, nicht viel",
+        "…をください": "… bitte. Bitte geben Sie mir …",
+        "おつり": "Wechselgeld",
+        "くつ": "Schuhe",
+        "げた": "japanische Holzsandalen",
+        "ふで": "Schreibpinsel",
+        "とても": "sehr",
+        "お金^(おかね)^": "Geld",
+        "ユーロ [yūro]": "Euro (Währung)",
+        "とけい": "Uhr"
+      }
+    }
+  }
+}

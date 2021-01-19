@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+  <title>Adventskalender</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="David Penkowoj">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rot: #B33939;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--rot);
+    }
+
+    h1 {
+      font-size: 44px;
+      color: #FFFFFF;
+      text-align: center;
+      margin: 1em 2em 0 2em;
+      text-shadow: 0 0 30px #000000;
+      font-family: "Courgette", cursive, sans-serif;
+    }
+
+    h2 {
+      color: #FFFFFF;
+      text-align: center;
+      margin-bottom: 2em;
+      margin: 2em 2em 1em 2em;
+      text-shadow: 0 0 25px #000000;
+      font-family: "Courgette", cursive, sans-serif;
+    }
+
+    #adventskalender {
+      text-align: center;
+    }
+
+    img {
+      width: 10em;
+      margin: 2em;
+      height: 10em;
+      cursor: not-allowed;
+      border-radius: 15px;
+      border: 5px solid var(--rot);
+      box-shadow: 0 0 25px #00000069;
+      filter: grayscale(1);
+    }
+
+    .allowed {
+      filter: none;
+      cursor: pointer;
+      border-color: #FFFFFF;
+    }
+
+    video {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+      width: 50vw;
+      outline: none;
+
+      transform: translate(-50%, -50%);
+    }
+
+    .video {
+      display: none;
+    }
+
+    .overlay {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      background-color: #000000C3;
+    }
+
+    @media only screen and (max-width: 700px) {
+      video {
+        width: 100vw;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      img {
+        margin: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="adv-delete" id="adv-title">Adventskalender 2020</h1>
+  <h2 class="adv-delete">Die Klosterkirche Bordesholm wünscht Ihnen eine schöne Adventszeit!</h2>
+  <noscript class="adv-delete">Ihr Browser ist nicht fähig, den Adventskalender anzuzeigen.</noscript>
+  <div class="adv-delete" id="adventskalender"></div>
+  <div class="adv-delete overlay video">
+    <video controlsList="nodownload" controls>
+      <source src="" type="video/mp4">
+    </video>
+  </div>
+  <script type="text/javascript">
+    const video = document.querySelector("video");
+
+    video.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+
+    // Erkennt das verlassen der Videoansicht
+    document.querySelector(".overlay").addEventListener("click", (event) => {
+      if (event.target.nodeName == "VIDEO") return;
+
+      document.body.style.overflowY = "auto";
+
+      event.target.style.display = "none";
+      video.pause();
+    });
+
+    // Öffnet das Türchen
+    function clicked(i) {
+      document.querySelector(".video").style.display = "block";
+      document.body.style.overflowY = "hidden";
+
+      document.querySelector("source").src = `./assets/klosterkirche-bordesholm-adventskalender/content/v${i}.mp4`;
+      video.load();
+      video.play();
+    }
+
+    // Generiert ein Video-Element
+    function generateVideo(i) {
+      const elem = document.createElement("img");
+
+      elem.src = `./assets/klosterkirche-bordesholm-adventskalender/placeholders/DigiAdv_${i}.jpg`;
+
+      document.querySelector("#adventskalender").appendChild(elem);
+
+      if (i <= (new Date().getDate())) {
+        elem.addEventListener("click", () => { clicked(i); });
+        elem.classList.add("allowed");
+      }
+    }
+
+    // Führt aus
+    function execute() {
+      const dateinfo = new Date();
+ 
+      if (dateinfo.getMonth() != 11 || dateinfo.getDate() > 25) {
+        document.querySelectorAll(".adv-delete").forEach((target) => {
+          target.remove();
+        });
+
+        document.write("<h1>Der Adventskalender ist zurzeit nicht verfügbar!<h2>");
+
+        return;
+      }
+ 
+      for (let i = 1; i < 25; i++) {
+        generateVideo(i);
+      }
+
+      document.querySelector("noscript").remove();
+    }
+
+    try {
+      execute();
+    } catch (e) {
+      console.error(e);
+    }
+  </script>
+</body>
+
+</html>

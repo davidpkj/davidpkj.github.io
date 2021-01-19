@@ -1,0 +1,52 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* GENERAL STUFF */
+:root {
+  --text: #121212;
+  --primary: #3F51B5;
+  --select: #5C6BC0;
+  --disabled: #AAAAAA;
+  --background: #EFEFEF;
+  --highlight: #E7E7E7;
+  --shadow: #DEDEDE;
+}
+
+::selection {
+  color: var(--background);
+  background-color: var(--select);
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  font-family: "Nunito", "Sawarabi Mincho", sans-serif;
+}
+
+.disabled, *:disabled {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  border-color: var(--disabled) !important;
+  background-color: var(--disabled) !important;
+  box-shadow: 0 0 10px 0 var(--disabled) !important;
+}
+
+/* TYPOGRAPHY */
+p {
+  font-size: 18px;
+  color: var(--text);
+}
+
+/* DARKMODE IF SET BY SYSTEM */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #FFFFFF;
+    --disabled: #252525;
+    --background: #131313;
+    --highlight: #202020;
+    --shadow: #101010;
+  }
+}

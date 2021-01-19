@@ -1,0 +1,126 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=3cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage{times}
+
+\begin{document}
+  \section*{Vorwort}
+  Dieses Dokument soll als "`Erste-Hilfe-Kasten"' dienen wenn es Probleme am schulischen IServ Netzwerk oder an schulischer Hardware geben sollte. 
+  Alle folgenden Inhalte basieren auf meiner persönlichen Erfahrung und verschiedensten Rechercheergebnissen während meiner Zeit als Netzwerkadministrator an meiner Schule.
+
+  Ich stelle dieses Dokument gemäß der MIT-Lizens der Öffentlichkeit zur Verfügung. 
+  Die Lizens finden Sie unter \texttt{https://davidpkj.github.io/LICENSE}
+  \newline
+  \newline
+  {\em David Penkowoj, \today}
+
+  \tableofcontents
+  \clearpage
+
+  \section{Klassisches aber Wichtiges!}
+  
+  \subsection{Aus und an geschaltet?}
+  Man hasst es zu hören, aber haben Sie versucht es aus und ein zu schalten?
+  Manchmal sind Fehler temporär und sie können durch stumpfes aus und anschalten des Endgerätes behoben werden. 
+  Bei Mobilgeräten ist hier übrigens nicht der stand-by gemeint.
+
+  \subsection{Anmeldedaten korrekt?}
+  Es kann auch sein das die Daten, mit denen sie sich anmelden möcht inkorrekt sind.
+  In diesem Falle sollten Sie kontakt mit einer Netzwerkadministrator aufnehmen.
+  Dieser wird Ihnen dabei Helfen, Ihre Daten wiederherzustellen.
+
+  \subsection{Anmeldedaten an richtiger Stelle?}
+  Achten Sie darauf, dass Sie Ihre Anmeldedaten an der richtigen Stelle angeben.
+  \newline
+  \newline
+  \begin{tabular}{l l}
+    Passwort:             & Ihr IServ Passwort (\$!ch\&r35p\#s\$wo27) \\
+    Identität:            & Ihr IServ Nutzername (max.mustermann) \\
+    Anonyme Identität:    & Frei lassen \\
+  \end{tabular}
+
+  \section{Anmeldeprobleme}
+
+  \subsection{Apple}
+  Ich habe eher wenig erfahrung mit Netzwerk-Anmeldeproblemen unter Apple.
+  Alle bisherigen fälle standen eher mit einem vergessenen Passwort in verbindung.
+
+  \subsection{Android 5 oder niedriger}
+  Da diese Version sehr veraltet ist, wird grundsätzlich eher wenig support geboten.
+  Es ist daher unwarscheinlich, dass Sie sich am Netzwerk anmelden können.
+
+  Ihnen steht aber selbstverständlich frei eine der folgenden Methoden für neuere Versionen zu versuchen aber ich kann nur ein upgrade zu einer höheren version empfehlen.
+  Auch aus Sicherheitsgründen.
+
+  \subsection{Android 7}
+  Öffnen Sie die WLAN-Einstellungen und in dem selben Dialog, wo Sie Ihre Accountdaten angeben, finden Sie auch (manchmal unter "`Erweiterte Einstellungen"' versteckt) folgende Parameter.
+  Bitte stellen Sie dort die koresspondierenden Werte ein.
+  Falls dies nicht funktionieren sollte, versuchen Sie Abschnitt \ref{didntwork}.
+  \newline
+  \newline
+  \begin{tabular}{l l}
+    EAP:                          & PEAP \\
+    Phase-2-Authentifizierung:    & Keine \\
+    CA-Zertifikat:                & Systemzertifikate \\
+    IP Einstellungen:             & DHCP \\
+    Proxy:                        & Keine \\
+  \end{tabular}
+
+  \subsection{Restliche Android versionen}
+  Öffnen Sie die WLAN-Einstellungen und in dem selben Dialog, wo Sie Ihre Accountdaten angeben, finden Sie auch (manchmal unter "`Erweiterte Einstellungen"' versteckt) folgende Parameter.
+  Bitte stellen Sie dort die koresspondierenden Werte ein.
+  Falls dies nicht funktionieren sollte, versuchen Sie Abschnitt \ref{didntwork}.
+  \newline
+  \newline
+  \begin{tabular}{l l}
+    EAP:                          & PEAP \\
+    Phase-2-Authentifizierung:    & Keine \\
+    CA-Zertifikat:                & Nicht validieren \\
+    IP Einstellungen:             & DHCP \\
+    Proxy:                        & Keine \\
+  \end{tabular}
+
+  \subsection{Wenn vorheriges nicht funktioniert} \label{didntwork}
+  Falls die oben stehenden Methoden nicht für Sie funktionieren, empfehle ich noch alle acht möglichen kombinationen mit folgenden Parametern zu versuchen.
+  \newline
+  \newline
+  \begin{tabular}{l l}
+    EAP:                          & TTLS \\
+    Phase-2-Authentifizierung:    & MSCHAPSv2 \\
+    CA-Zertifikat:                & Nicht validieren \\
+  \end{tabular}
+
+  \section{Internetprobeleme}
+
+  \subsection{Das Internet funktioniert nur an bestimmten Orten!}
+  Wenn das WLAN nur an bestimmten Stellen der Schule funktioniert, liegt es vermutlich an einem defekten Access Point. Hier wäre es hilfreich einem Administrator bescheid zu geben. Mehr können Sie meistens nicht tun.
+
+  \subsection{Das WLAN ist verbunden aber ich habe kein Internet!}
+  Vermutlich hat das Internet gerade ein temporäres Problem. 
+  Es wird irgendwann wieder gehen.
+  Mehr ist meist schwer zu sagen.
+
+  \section{Dateienfehler}
+    
+  \subsection{Probleme beim Herunterladen}
+    Es kann viele Gründe geben, warum sich eine Datei nicht Herunterladen lässt. Hier sind jedoch einige häufige und leicht umzusetzende Tipps.
+    \begin{enumerate}
+      \item Stellen Sie sicher, dass der Dateiname unter Ihrem Betriebssystem kompatibel ist. Dies wird im Dateienmodul von IServ Normalerweise angezeigt.
+      \item Überprüfen Sie, ob die App oder das Programm, dass Sie nutzen um auf das IServ Portal zuzugreifen, berechtigung hat, Dateien zu lesen oder zu schreiben und das Herunterladen von Dateien aktiviert ist.
+      \item Kontrollieren Sie außerdem, ob evtl. der Speicherplatz des Gerätes für die Datei ausreicht.
+    \end{enumerate}
+    
+  \subsection{Probleme beim Öffnen}
+  Wenn sich eine Datei nicht öffnen lässt, steht das Problem meist mit einer fehlenden App, einem fehldenen Programm oder einer nicht unterstützten Codec zusammen.
+  Hier lässt sich empfehlen ein entsprechendes Programm oder eine entsprechende App herunterzuladen. Meist enthalten diese auch die benötigten Codecs.
+
+  \section{Tonprobleme}
+
+  \subsection{An Activeboards}
+  Stellen Sie sicher, dass die Tonausgabe an der Hardware angeschaltet ist.
+  Kontrollieren Sie auch, ob die Ausgabe am Rechner richtig gesetzt ist, und das Borad die Quelle erkennt. Letzteres können Sie am Board über die "`Source"'-Taste ändern.
+
+  \subsection{Im Forum}
+  Suchen Sie Jesper. ;)
+    
+\end{document}

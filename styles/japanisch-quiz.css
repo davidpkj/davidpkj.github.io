@@ -1,0 +1,344 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+/* GENERAL STUFF */
+:root {
+  --right: #2ed573;
+  --wrong: #ff4757;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.invisible {
+  display: none !important;
+  
+  opacity: 0 !important;
+
+  transition: all 0.1s;
+}
+
+/* BUTTONS AND WRAPPERS */
+.action-wrapper {
+  display: flex;
+
+  width: 100%;
+  justify-content: start;
+}
+
+.action-wrapper button {
+  width: 50px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-top: 1.5vh;
+  border-radius: 15px;
+  margin-left: 0 !important;
+  background-color: var(--primary);
+  box-shadow: 0 0 10px var(--shadow);
+
+  transition: all 0.1s;
+}
+
+.action-wrapper button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.action-wrapper button:focus, .action-wrapper button:hover {
+  outline: none;
+  background-color: var(--select);
+  box-shadow: 0 0 10px 0 var(--select);
+
+  transition: all 0.1s;
+}
+
+.action-settings-button {
+  z-index: 10;
+}
+
+.progress {
+  position: relative;
+
+  width: 100%;
+  height: 10px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  margin: 1.5vh 2vw;
+  text-align: center;
+  border-radius: 1em;
+  background-color: var(--disabled);
+  box-shadow: 0 0 10px 0 var(--disabled);
+}
+
+.progress::after {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 0;
+  content: "";
+  height: 10px;
+  border-radius: 1em;
+  background-color: var(--primary);
+
+  transition: all 0.5s ease-in-out;
+}
+
+.action-button {
+  height: 2em;
+  font-size: 18px;
+  margin-right: 0;
+  margin-left: 0.5vw;
+  background-image: none;
+  background-color: var(--primary);
+  width: calc(100% - 20px) !important;
+
+  transition: all 0.1s;
+}
+
+.action-button:focus,
+.action-button:hover {
+  outline: none;
+  cursor: pointer;
+  background-color: var(--select);
+  box-shadow: 0 0 10px 0 var(--select);
+
+  transition: all 0.1s;
+}
+
+.help-link {
+  line-height: 2.0;
+  text-decoration: none;
+}
+
+.svg {
+  width: 1em;
+  height: 1em;    
+  padding-top: 6px;
+  background-color: transparent;
+
+  transition: all 0.1s;
+}
+
+.quiz {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 2vh 1vw;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.verb-wrapper,
+.guess-wrapper {
+  display: flex;
+
+  width: 50vw;
+  padding: 1vh;
+  color: var(--text);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.verb-wrapper {
+  justify-content: space-between;
+}
+
+.verb,
+.result {
+  font-size: 36px;
+  text-align: center;
+}
+
+.result {
+  display: none;
+}
+
+.guess-button {
+  width: 98%;
+  height: 23%;
+  border: none;
+  outline: none;
+  font-size: 36px;
+  color: #ffffff;
+  margin: 1.5vh 2vw;
+  text-align: center;
+  border-radius: 15px;
+  background-color: var(--primary);
+  box-shadow: 0 0 10px var(--shadow);
+
+  transition: all 0.1s;
+}
+
+.guess-button:focus,
+.guess-button:hover {
+  outline: none;
+  cursor: pointer;
+  background-color: var(--select);
+  box-shadow: 0 0 10px 0 var(--select);
+
+  transition: all 0.1s;
+}
+
+.guess-button::-moz-focus-inner {
+  border: 0;
+}
+
+/* SETTINGS */
+.action-settings-overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -10;
+  width: 100vw;
+  padding: 10vh 1em;
+  box-sizing: border-box;
+  background-color: var(--background);
+
+  transition: all 0.3s cubic-bezier(0, 0, 1, 0);
+}
+
+.action-settings-overlay.active {
+  opacity: 1;
+  z-index: 10;
+  height: 100vh;
+
+  transition: all 0.4s cubic-bezier(0, 0, 0, 1);
+}
+
+.settings-group {
+  display: none;
+
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: transparent;
+}
+
+.action-settings-overlay.active .settings-group {
+  display: flex;
+}
+
+.settings-title {
+  position: relative;
+
+  width: 100vw;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 30px;
+  background-color: transparent;
+}
+
+.settings-title::after {
+  position: absolute;
+
+  left: 0;
+  top: 1.5em;
+  width: 2em;
+  height: 4px;
+  content: "";
+  background-color: var(--primary);
+}
+
+.settings-toggle {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 10px;
+  color: var(--text);
+  margin-bottom: 10px;
+  border-radius: 15px;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 4px solid var(--primary);
+}
+
+.settings-toggle.active {
+  background-color: var(--primary);
+}
+
+.settings-text {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+/* MODIFIERS */
+*:disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled) !important;
+  box-shadow: 0 0 10px 0 var(--disabled) !important;
+}
+
+.right {
+  background-color: var(--right) !important;
+  box-shadow: 0 0 10px 0 var(--right) !important;
+}
+
+.wrong {
+  background-color: var(--wrong) !important;
+  box-shadow: 0 0 10px 0 var(--wrong) !important;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .quiz {
+    width: 96vw;
+    height: 98vh;
+    padding: 1vh 2vw;
+    flex-direction: column;
+  }
+
+  .action-wrapper button:not(:last-child) {
+    margin-right: 1vw;
+  }
+
+  .action-button {
+    margin-right: 2vw;
+    width: calc(100% - 8vw) !important;
+  }
+
+  .verb-wrapper,
+  .guess-wrapper {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .guess-wrapper {
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .guess-button {
+    font-size: 22px;
+    width: calc(50% - 4vw);
+    height: calc(50% - 3vh);
+  }
+
+  .action-settings-overlay {
+    padding: 10vh 0;
+  }
+
+  .result {
+    font-size: 28px;
+  }
+}
