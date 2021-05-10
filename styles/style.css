@@ -4,8 +4,8 @@
 /* GENERAL STUFF */
 :root {
   --text: #121212;
-  --primary: #3F51B5;
-  --select: #5C6BC0;
+  --primary: #8C6957;
+  --select: #b18974;
   --disabled: #AAAAAA;
   --background: #EFEFEF;
   --highlight: #E7E7E7;
@@ -13,7 +13,7 @@
 }
 
 ::selection {
-  color: var(--background);
+  color: #CCCCCC;
   background-color: var(--select);
 }
 

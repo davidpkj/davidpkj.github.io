@@ -27,40 +27,41 @@ p a {
 }
 
 p a::after {
-  position: absolute;
+position: absolute;
 
-  left: 0;
-  width: 0%;
-  top: 1.2em;
-  height: 2px;
-  content: "";
-  background-color: var(--primary);
+left: 0;
+width: 0%;
+top: 1.2em;
+height: 2px;
+content: "";
+background-color: var(--primary);
 
-  transition: 0.1s ease-in-out;
+transition: 0.1s ease-in-out;
 }
 
 p a:focus::after, p a:hover::after {
-  width: 100%;
+width: 100%;
 
-  transition: 0.1s ease-in-out;
+transition: 0.1s ease-in-out;
 }
 
 h1 {
-  display: block;
+  display: inline-block;
   position: relative;
 
   padding: 1em 0;
   font-size: 28px;
+  width: fit-content;
   font-weight: normal;
   color: var(--primary);
 }
 
-h1::after {
+h1::before {
   position: absolute;
 
   left: 0;
   top: 75px;
-  width: 25vw;
+  width: 70%;
   height: 2px;
   content: "";
   background-color: var(--primary);
@@ -93,6 +94,16 @@ img {
 
 .wrapper {
   padding-top: 1em;
+}
+
+.vertical {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.vertical a {
+  width: 49%;
 }
 
 /* CARDS */
@@ -130,6 +141,10 @@ img {
   padding-bottom: 9px;
 
   transition: all 0.3s;
+}
+
+.card-description {
+  margin-top: 0.5em;
 }
 
 /* RESPONSIVENESS */
